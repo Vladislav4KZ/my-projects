@@ -1,7 +1,7 @@
 import React from 'react';
 import CommentSection from '../components/CommentSection';
 
-function OpposingForceRus() {
+function OpposingForceRus({ darkMode }) {
   return (
     <div className="project-page">
       <div className="project-header">
@@ -43,7 +43,7 @@ function OpposingForceRus() {
           <a href="#" className="download-btn">Скачать русификатор</a>
         </section>
         
-        <CommentSection />
+        <CommentSection darkMode={darkMode} />
       </div>
     </div>
   );

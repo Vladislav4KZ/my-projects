@@ -1,69 +1,30 @@
-import React, { useState } from 'react';
-import '../styles/Comments.css';
+import React, { useEffect, useRef } from 'react';
 
-function CommentSection() {
-  const [comments, setComments] = useState([]);
-  const [newComment, setNewComment] = useState({ name: '', text: '' });
+const CommentSection = ({ darkMode }) => {
+  const containerRef = useRef(null);
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setNewComment(prev => ({ ...prev, [name]: value }));
-  };
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://giscus.app/client.js';
+    script.setAttribute('data-repo', 'Vladislav4KZ/my-projects');
+    script.setAttribute('data-repo-id', 'РЕПО_ID'); // копируется с giscus.app
+    script.setAttribute('data-category', 'Общая категория');
+    script.setAttribute('data-category-id', 'ID_КАТЕГОРИИ'); // тоже с giscus.app
+    script.setAttribute('data-mapping', 'pathname');
+    script.setAttribute('data-reactions-enabled', '1');
+    script.setAttribute('data-emit-metadata', '0');
+    script.setAttribute('data-input-position', 'bottom');
+    script.setAttribute('data-theme', darkMode ? 'dark' : 'light');
+    script.setAttribute('data-lang', 'ru');
+    script.setAttribute('crossorigin', 'anonymous');
+    script.async = true;
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (newComment.name && newComment.text) {
-      const comment = {
-        id: Date.now(),
-        name: newComment.name,
-        text: newComment.text,
-        date: new Date().toLocaleDateString()
-      };
-      setComments(prev => [...prev, comment]);
-      setNewComment({ name: '', text: '' });
-    }
-  };
+    const container = containerRef.current;
+    container.innerHTML = ''; // очищаем, чтобы избежать дублирования
+    container.appendChild(script);
+  }, [darkMode]);
 
-  return (
-    <div className="comments-section">
-      <h3>Комментарии</h3>
-      
-      <form className="comment-form" onSubmit={handleSubmit}>
-        <div className="form-group">
-          <input
-            type="text"
-            name="name"
-            placeholder="Ваше имя"
-            value={newComment.name}
-            onChange={handleInputChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <textarea
-            name="text"
-            placeholder="Ваш комментарий"
-            value={newComment.text}
-            onChange={handleInputChange}
-            required
-          ></textarea>
-        </div>
-        <button type="submit" className="submit-btn">Отправить</button>
-      </form>
-
-      <div className="comments-list">
-        {comments.map(comment => (
-          <div key={comment.id} className="comment">
-            <div className="comment-header">
-              <span className="comment-author">{comment.name}</span>
-              <span className="comment-date">{comment.date}</span>
-            </div>
-            <p className="comment-text">{comment.text}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
+  return <div ref={containerRef} />;
+};
 
 export default CommentSection;

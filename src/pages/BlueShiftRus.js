@@ -1,7 +1,7 @@
 import React from 'react';
 import CommentSection from '../components/CommentSection';
 
-function BlueShiftRus() {
+function BlueShiftRus({ darkMode }) {
   return (
     <div className="project-page">
       <div className="project-header">
@@ -43,7 +43,7 @@ function BlueShiftRus() {
           <a href="#" className="download-btn">Скачать русификатор</a>
         </section>
         
-        <CommentSection />
+        <CommentSection darkMode={darkMode} />
       </div>
     </div>
   );

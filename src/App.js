@@ -38,12 +38,12 @@ function App() {
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/hl-rus" element={<HalfLifeRus />} />
-            <Route path="/cs-rus" element={<CounterStrikeRus />} />
-            <Route path="/tfc-rus" element={<TeamFortressClassicRus />} />
-            <Route path="/bs-rus" element={<BlueShiftRus />} />
-            <Route path="/of-rus" element={<OpposingForceRus />} />
-            <Route path="/yapb-graphs" element={<YaPBGraphs />} />
+            <Route path="/hl-rus" element={<HalfLifeRus darkMode={darkMode} />} />
+            <Route path="/cs-rus" element={<CounterStrikeRus darkMode={darkMode} />} />
+            <Route path="/tfc-rus" element={<TeamFortressClassicRus darkMode={darkMode} />} />
+            <Route path="/bs-rus" element={<BlueShiftRus darkMode={darkMode} />} />
+            <Route path="/of-rus" element={<OpposingForceRus darkMode={darkMode} />} />
+            <Route path="/yapb-graphs" element={<YaPBGraphs darkMode={darkMode} />} />
           </Routes>
         </main>
         <Footer />

@@ -1,7 +1,7 @@
 import React from 'react';
 import CommentSection from '../components/CommentSection';
 
-function TeamFortressClassicRus() {
+function TeamFortressClassicRus({ darkMode }) {
   return (
     <div className="project-page">
       <div className="project-header">
@@ -42,7 +42,7 @@ function TeamFortressClassicRus() {
           <a href="#" className="download-btn">Скачать русификатор</a>
         </section>
         
-        <CommentSection />
+        <CommentSection darkMode={darkMode} />
       </div>
     </div>
   );

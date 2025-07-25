@@ -1,7 +1,7 @@
 import React from 'react';
 import CommentSection from '../components/CommentSection';
 
-function YaPBGraphs() {
+function YaPBGraphs({ darkMode }) {
   return (
     <div className="project-page">
       <div className="project-header">
@@ -43,7 +43,7 @@ function YaPBGraphs() {
           <a href="#" className="download-btn">Скачать графы</a>
         </section>
         
-        <CommentSection />
+        <CommentSection darkMode={darkMode} />
       </div>
     </div>
   );
