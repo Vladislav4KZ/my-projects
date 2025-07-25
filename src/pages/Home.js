@@ -37,7 +37,7 @@ function Home() {
       title: "Графы для YaPB",
       image: "/images/yapb.png",
       description: "Набор графов для ботов YaPB",
-      link: "/yapb"
+      link: "/yapb-graphs"
     }
   ];
 

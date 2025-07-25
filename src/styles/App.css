@@ -1,3 +1,47 @@
+:root {
+  --background-color: #f8f9fa;
+  --text-color: #333;
+  --header-background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  --card-background: white;
+  --border-color: #eee;
+  --shadow-color: rgba(0,0,0,0.1);
+  --shadow-color-strong: rgba(0,0,0,0.15);
+  --hero-background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --hero-text: white;
+  --link-color: #3498db;
+  --link-hover: #2980b9;
+  --button-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --button-secondary: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  --button-success: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+  --comment-background: white;
+  --form-background: white;
+  --input-border: #ddd;
+  --input-focus: #3498db;
+  --input-focus-shadow: rgba(52, 152, 219, 0.2);
+}
+
+[data-theme="dark"] {
+  --background-color: #1a1a1a;
+  --text-color: #e0e0e0;
+  --header-background: linear-gradient(135deg, #1e2b3a 0%, #253746 100%);
+  --card-background: #2d2d2d;
+  --border-color: #444;
+  --shadow-color: rgba(0,0,0,0.3);
+  --shadow-color-strong: rgba(0,0,0,0.5);
+  --hero-background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+  --hero-text: #f0f0f0;
+  --link-color: #63b3ed;
+  --link-hover: #4299e1;
+  --button-primary: linear-gradient(135deg, #5a67d8 0%, #667eea 100%);
+  --button-secondary: linear-gradient(135deg, #3182ce 0%, #4299e1 100%);
+  --button-success: linear-gradient(135deg, #38a169 0%, #48bb78 100%);
+  --comment-background: #2d2d2d;
+  --form-background: #2d2d2d;
+  --input-border: #555;
+  --input-focus: #63b3ed;
+  --input-focus-shadow: rgba(99, 179, 237, 0.3);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,8 +51,9 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  color: #333;
-  background-color: #f8f9fa;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -26,11 +71,11 @@ body {
 .hero-section {
   text-align: center;
   padding: 60px 20px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: var(--hero-background);
+  color: var(--hero-text);
   margin-bottom: 40px;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px var(--shadow-color);
 }
 
 .hero-section h1 {
@@ -63,7 +108,7 @@ body {
   align-items: center;
   margin-bottom: 30px;
   padding-bottom: 20px;
-  border-bottom: 2px solid #eee;
+  border-bottom: 2px solid var(--border-color);
 }
 
 .project-icon {
@@ -76,7 +121,7 @@ body {
 
 .project-header h1 {
   font-size: 2rem;
-  color: #2c3e50;
+  color: var(--text-color);
 }
 
 .project-content section {
@@ -86,8 +131,8 @@ body {
 .project-content h2 {
   font-size: 1.5rem;
   margin-bottom: 20px;
-  color: #34495e;
-  border-left: 4px solid #3498db;
+  color: var(--text-color);
+  border-left: 4px solid var(--link-color);
   padding-left: 15px;
 }
 
@@ -109,7 +154,7 @@ body {
 
 .download-btn {
   display: inline-block;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: var(--button-primary);
   color: white;
   padding: 15px 30px;
   border-radius: 50px;
@@ -117,12 +162,14 @@ body {
   font-weight: bold;
   font-size: 1.1rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 15px var(--shadow-color);
+  border: none;
+  cursor: pointer;
 }
 
 .download-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 6px 20px var(--shadow-color-strong);
 }
 
 /* Responsive design */

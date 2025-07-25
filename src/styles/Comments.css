@@ -1,20 +1,20 @@
 .comments-section {
   margin-top: 40px;
   padding-top: 30px;
-  border-top: 2px solid #eee;
+  border-top: 2px solid var(--border-color);
 }
 
 .comments-section h3 {
   font-size: 1.5rem;
   margin-bottom: 25px;
-  color: #2c3e50;
+  color: var(--text-color);
 }
 
 .comment-form {
-  background: white;
+  background: var(--form-background);
   padding: 25px;
   border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 3px 10px var(--shadow-color);
   margin-bottom: 30px;
 }
 
@@ -26,18 +26,20 @@
 .form-group textarea {
   width: 100%;
   padding: 12px 15px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--input-border);
   border-radius: 5px;
   font-size: 1rem;
   font-family: inherit;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--card-background);
+  color: var(--text-color);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #3498db;
-  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+  border-color: var(--input-focus);
+  box-shadow: 0 0 0 2px var(--input-focus-shadow);
 }
 
 .form-group textarea {
@@ -46,7 +48,7 @@
 }
 
 .submit-btn {
-  background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+  background: var(--button-success);
   color: white;
   border: none;
   padding: 12px 30px;
@@ -67,10 +69,10 @@
 }
 
 .comment {
-  background: white;
+  background: var(--comment-background);
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 3px 10px var(--shadow-color);
   margin-bottom: 20px;
 }
 
@@ -79,23 +81,24 @@
   justify-content: space-between;
   margin-bottom: 15px;
   padding-bottom: 10px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .comment-author {
   font-weight: 600;
-  color: #2c3e50;
+  color: var(--text-color);
 }
 
 .comment-date {
-  color: #95a5a6;
+  color: var(--text-color);
+  opacity: 0.7;
   font-size: 0.9rem;
 }
 
 .comment-text {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #34495e;
+  color: var(--text-color);
 }
 
 @media (max-width: 768px) {
