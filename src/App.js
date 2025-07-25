@@ -20,12 +20,15 @@ function App() {
   }, []);
 
   useEffect(() => {
-    document.body.className = darkMode ? 'dark-mode' : 'light-mode';
+    // Применяем тему немедленно при переключении
+    document.body.classList.toggle('dark-mode', darkMode);
+    document.body.classList.toggle('light-mode', !darkMode);
+    document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
     localStorage.setItem('darkMode', darkMode);
   }, [darkMode]);
 
   const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
+    setDarkMode(prev => !prev);
   };
 
   return (
