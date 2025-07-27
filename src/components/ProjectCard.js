@@ -4,14 +4,16 @@ import '../styles/ProjectCard.css';
 
 function ProjectCard({ title, image, description, link }) {
   return (
-    <div className="project-card">
-      <img src={image} alt={title} className="project-image" />
+    <Link to={link} className="project-card">
+      <img src={process.env.PUBLIC_URL + image} alt={title} className="project-image" />
       <div className="project-content">
         <h3 className="project-title">{title}</h3>
         <p className="project-description">{description}</p>
-        <Link to={link} className="project-link">Подробнее</Link>
+        <div className="project-link-container">
+          <span className="project-link">Подробнее</span>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
