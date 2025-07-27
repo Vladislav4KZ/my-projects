@@ -12,12 +12,10 @@ import YaPBGraphs from './pages/YaPBGraphs';
 import './styles/App.css';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
-
-  useEffect(() => {
-    const isDark = localStorage.getItem('darkMode') === 'true';
-    setDarkMode(isDark);
-  }, []);
+  const [darkMode, setDarkMode] = useState(() => {
+    // Сразу получаем значение из localStorage при инициализации состояния
+    return localStorage.getItem('darkMode') === 'true';
+  });
 
   useEffect(() => {
     // Применяем тему немедленно при переключении

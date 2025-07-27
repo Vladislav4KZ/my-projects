@@ -83,11 +83,11 @@ function HalfLifeRus({ darkMode }) {
         {activeTab === 'installation' && (
           <section className="installation">
             <h2>Инструкция по установке</h2>
-            <ol>
-              <li>Скачайте архив с русификатором</li>
-              <li>Распакуйте содержимое архива в папку с игрой</li>
-              <li>Запустите игру и выберите русский язык в настройках</li>
-            </ol>
+            <p>Извлеките содержимое HLRusFull.zip в директорию Xash3D FWGS (где находится папка valve)</p>
+            <strong>Android:</strong>
+            <p>Извлеките содержимое в Android/data/su.xash.engine.test/files</p>
+            <strong>Windows:</strong>
+            <p>Извлеките содержимое в директорию движка (где находится xash3d.exe и папка valve)</p>
           </section>
         )}
 
@@ -138,14 +138,14 @@ function HalfLifeRus({ darkMode }) {
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
               <button className="modal-close" onClick={closeModal}>✖</button>
               <button className="modal-prev" onClick={goToPreviousScreenshot}>←</button>
-              <img src={process.env.PUBLIC_URL + screenshots[currentScreenshotIndex]} alt="Full screen screenshot" className="modal-image" />
+              <img src={process.env.PUBLIC_URL + screenshots[currentScreenshotIndex]} alt="Полноэкранный скриншот" className="modal-image" />
               <button className="modal-next" onClick={goToNextScreenshot}>→</button>
             </div>
           </div>
         )}
 
         <section className="download">
-          <a href="#" className="download-btn">Скачать русификатор</a>
+          <a href="https://disk.yandex.kz/d/umtg0XZYDnlsqw" className="download-btn">Скачать русификатор</a>
         </section>
 
         <CommentSection darkMode={darkMode} term="HalfLifeRus" />
