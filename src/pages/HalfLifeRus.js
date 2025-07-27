@@ -4,6 +4,34 @@ import { ReactComponent as HalfLifeRusLogo } from '../vector/hl-rus.svg';
 
 function HalfLifeRus({ darkMode }) {
   const [activeTab, setActiveTab] = useState('description');
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentScreenshotIndex, setCurrentScreenshotIndex] = useState(0);
+
+  const screenshots = [
+    '/images/HLRus_1.jpg',
+    '/images/HLRus_2.jpg',
+    '/images/HLRus_3.jpg',
+    '/images/HLRus_4.jpg',
+    '/images/HLRus_5.jpg',
+    '/images/HLRus_6.jpg',
+  ];
+
+  const openModal = (index) => {
+    setCurrentScreenshotIndex(index);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const goToNextScreenshot = () => {
+    setCurrentScreenshotIndex((prevIndex) => (prevIndex + 1) % screenshots.length);
+  };
+
+  const goToPreviousScreenshot = () => {
+    setCurrentScreenshotIndex((prevIndex) => (prevIndex - 1 + screenshots.length) % screenshots.length);
+  };
 
   return (
     <div className="project-page">
@@ -37,7 +65,7 @@ function HalfLifeRus({ darkMode }) {
               Русификатор озвучки: <strong>«XXI век», Triada Games, Buka Entertainment, 7Wolf, Fargus и Kudos.</strong><br />
               Озвучка солдатов: <strong>Пётр Бойко</strong><br />
               Озвучка оповещений Чёрной Мезы: <strong>Евгений Синельников</strong><br />
-              Русификатор главного меню для Xash3D (WON-Style): <strong>Владислав Сухов ( $_Vladislav )</strong><br />
+              Русификатор главного меню для Xash3D (WON-Style): <strong>Владислав Сухов ($_Vladislav)</strong><br />
               Озвучка H.E.V костюма в HD качестве: <strong>Buka Entertainment</strong><br />
               Русификатор MainUI Xash3D: <strong>$_Vladislav</strong>
             </p>
@@ -90,8 +118,30 @@ function HalfLifeRus({ darkMode }) {
         {activeTab === 'screenshots' && (
           <section className="screenshots">
             <h2>Скриншоты</h2>
-            {/* Скриншоты будут добавлены позже */}
+            <div className="screenshots-grid">
+              {screenshots.map((src, index) => (
+                <img
+                  key={index}
+                  src={process.env.PUBLIC_URL + src}
+                  alt={`Скриншот ${index + 1}`}
+                  className="screenshot"
+                  onClick={() => openModal(index)} // Открытие модалки при клике
+                />
+              ))}
+            </div>
           </section>
+        )}
+
+        {/* Модальное окно для скриншотов */}
+        {isModalOpen && (
+          <div className="modal-overlay" onClick={closeModal}>
+            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+              <button className="modal-close" onClick={closeModal}>✖</button>
+              <button className="modal-prev" onClick={goToPreviousScreenshot}>←</button>
+              <img src={process.env.PUBLIC_URL + screenshots[currentScreenshotIndex]} alt="Full screen screenshot" className="modal-image" />
+              <button className="modal-next" onClick={goToNextScreenshot}>→</button>
+            </div>
+          </div>
         )}
 
         <section className="download">
