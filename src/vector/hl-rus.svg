@@ -1,0 +1,22 @@
+<svg width="148.9426mm" height="148.9413mm" viewBox="0 0 148.94259 148.9413" version="1.1" id="svg8">
+  <defs>
+    <linearGradient id="color-0" gradientUnits="userSpaceOnUse">
+      <stop style="stop-color: rgb(255, 94, 0);"/>
+    </linearGradient>
+    <linearGradient id="color-1">
+      <stop style="stop-color: rgb(255, 77, 0);" offset="0"/>
+      <stop offset="0.997" style="stop-color: rgb(120, 45, 0);"/>
+    </linearGradient>
+    <linearGradient id="color-1-0" href="#color-1" gradientUnits="userSpaceOnUse" x1="76.429" y1="30.69" x2="76.429" y2="113.683"/>
+    <linearGradient id="color-1-1" href="#color-1" gradientUnits="userSpaceOnUse" x1="74.471" y1="7.363" x2="74.471" y2="141.578"/>
+  </defs>
+  <rect x="-0.229" y="-0.025" width="149.857" height="149.17"/>
+  <path id="path21" d="M 92.306118,113.68271 75.583598,71.301185 51.066783,109.93001 H 35.696067 L 69.936358,54.638435 66.092278,43.710825 H 52.759913 v -13.02094 h 22.822395 l 26.213832,66.65925 11.52491,-3.75443 3.84061,12.913095 z" style="stroke-width: 0.433136; fill: url(#color-1-0);"/>
+  <path id="path23" d="m 141.57928,74.470435 c 0,37.067375 -30.04364,67.107555 -67.107562,67.107555 -37.063901,0 -67.1084,-30.03974 -67.1084,-67.107555 0,-37.06304 30.043631,-67.107117 67.1084,-67.107117 37.063492,0 67.107562,30.044077 67.107562,67.107117 z" style="fill: none; stroke-width: 14.7266; stroke-opacity: 0.9799; stroke: url(#color-1-1);"/>
+  <g transform="matrix(1, 0, 0, 1, 0.22914, 0.458281)">
+    <title>Russian Flag</title>
+    <rect fill="#fff" width="65.125" height="21.708" x="84.412" y="105.618" style="stroke-width: 26.458;"/>
+    <rect fill="#d52b1e" y="127.326" width="65.125" height="21.708" x="84.412" style="stroke-width: 26.458;"/>
+    <rect fill="#0039a6" y="120.09" width="65.125" height="14.471" x="84.412" style="stroke-width: 26.458;"/>
+  </g>
+</svg>

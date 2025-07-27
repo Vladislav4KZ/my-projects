@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import CommentSection from '../components/CommentSection';
+import { ReactComponent as HalfLifeRusLogo } from '../vector/hl-rus.svg';
 
 function HalfLifeRus({ darkMode }) {
   const [activeTab, setActiveTab] = useState('description');
@@ -7,7 +8,7 @@ function HalfLifeRus({ darkMode }) {
   return (
     <div className="project-page">
       <div className="project-header">
-        <img src="/images/hl-rus.png" alt="Half-Life Rus" className="project-icon" />
+        <HalfLifeRusLogo className="project-icon" />
         <h1>Русификатор Half-Life</h1>
       </div>
 
@@ -66,9 +67,22 @@ function HalfLifeRus({ darkMode }) {
           <section className="changelog">
             <h2>Список изменений</h2>
             <ul>
-              <li>v1.0 - Первоначальный релиз</li>
-              <li>v1.1 - Исправлены опечатки</li>
-              <li>v1.2 - Обновлен перевод диалогов</li>
+              <li><strong>31.07.2023</strong>
+              <p>Исправление текстового перевода, добавлен перевод новых строк для Xash3D FWGS 0.20.x/0.21.x</p></li>
+              <li><strong>30.07.2021</strong>
+              <p>Снова мелкие исправления текста<br />
+              Укорачивание или переиначивание текста чтобы влезал в меню (в настройках персонажа, видео и звука)<br />
+              Добавлен перевод новой строчки "Покинуть игру" в gameui_russian.txt которая появилась в обновлении Half-Life 1 build 8684 от 3 августа 2020 года в Steam<br />
+              Обновлены картинки с переводом WON/Xash3D меню, также добавил картинки в TGA формате для поддержки бета версии Xash3D FWGS 0.20.1</p></li>
+              <li><strong>18.07.2020</strong>
+              <p>Добавлены некоторые отсутствующие строчки в MainUI, исправления перевода, перенос конфига в папку userconfig.d (чтобы не заменять пользовательский userconfig.cfg)</p></li>
+              <li><strong>31.05.2020</strong>
+              <p>Добавлен перевод MainUI (пояснительный текст возле кнопок меню и всплывающие сообщения)<br />
+              Мелкая корректировка текста</p></li>
+              <li><strong>17.05.2019</strong>
+              <p>Добавлен перевод главного меню и HD озвучка H.E.V костюма</p></li>
+              <li><strong>15.07.2018</strong>
+              <p>Первый релиз русификатора</p></li>
             </ul>
           </section>
         )}
