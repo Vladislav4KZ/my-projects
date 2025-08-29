@@ -83,11 +83,7 @@ function HalfLifeRus({ darkMode }) {
         {activeTab === 'installation' && (
           <section className="installation">
             <h2>Инструкция по установке</h2>
-            <p>Извлеките содержимое HLRusFull.zip в директорию Xash3D FWGS (где находится папка valve)</p>
-            <strong>Android:</strong>
-            <p>Извлеките содержимое в Android/data/su.xash.engine.test/files</p>
-            <strong>Windows:</strong>
-            <p>Извлеките содержимое в директорию движка (где находится xash3d.exe и папка valve)</p>
+            <p>Положите файл HLRusFull.pk3 в папку valve/custom</p>
           </section>
         )}
 
@@ -95,6 +91,10 @@ function HalfLifeRus({ darkMode }) {
           <section className="changelog">
             <h2>Список изменений</h2>
             <ul>
+              <li><strong>20.08.2025</strong>
+              <p>Добавлен перевод новых строк<br />
+              Добавлены новые изображения с переводом кнопок меню - "Добавить в избранные/Убрать из избранных"<br />
+              Обновлён перевод для gameui_russian.txt и valve_russian.txt с поддержкой последнего обновления Half-Life в честь 25-летия игры.</p></li>
               <li><strong>31.07.2023</strong>
               <p>Исправление текстового перевода, добавлен перевод новых строк для Xash3D FWGS 0.20.x/0.21.x</p></li>
               <li><strong>30.07.2021</strong>
@@ -145,7 +145,7 @@ function HalfLifeRus({ darkMode }) {
         )}
 
         <section className="download">
-          <a href="https://disk.yandex.kz/d/umtg0XZYDnlsqw" className="download-btn">Скачать русификатор</a>
+          <a href="https://disk.yandex.ru/d/Kk5ysOoBNTfGPA" className="download-btn">Скачать русификатор</a>
         </section>
 
         <CommentSection darkMode={darkMode} term="HalfLifeRus" />
