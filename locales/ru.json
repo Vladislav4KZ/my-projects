@@ -1,0 +1,34 @@
+
+{
+  "header": {
+    "title": "$_Vladislav's Projects",
+    "home": "Главная"
+  },
+  "footer": {
+    "copy": "Все права защищены."
+  },
+  "home": {
+    "title": "Добро пожаловать!",
+    "subtitle": "Я занимаюсь переводами разных модов на Half-Life, делаю навигационные файлы для ботов и т.д.",
+    "projects_header": "Мои проекты"
+  },
+  "project": {
+    "description": "Описание",
+    "changelog": "История изменений",
+    "screenshots": "Скриншоты",
+    "installation": "Установка",
+    "discussions": "Обсуждения",
+    "not_found_title": "Проект не найден",
+    "not_found_description": "Проект, который вы ищете, не существует.",
+    "back_to_home": "Вернуться на главную",
+    "step": "Шаг",
+    "comment_form_name": "Ваше имя",
+    "comment_form_comment": "Ваш комментарий",
+    "comment_form_submit": "Отправить комментарий",
+    "comment_submitted_title": "Комментарий отправлен",
+    "comment_submitted_description": "Ваш комментарий был добавлен.",
+    "addons": "Дополнения",
+    "download": "Скачать",
+    "image_not_found": "Изображение не найдено"
+  }
+}
