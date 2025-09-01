@@ -25,9 +25,7 @@ export interface Project {
 }
 
 type ProjectBase = Omit<Project, 'title' | 'shortDescription' | 'description' | 'changelog' | 'installation' | 'addons'> & {
-  changelog?: Omit<NonNullable<Project['changelog']>[0], 'changes'> & {
-    changes: { [key in Locale]: string[] };
-  }[];
+  changelog?: ({ date: string; changes: { [key in Locale]: string[] } })[];
   installation?: { [key in Locale]: string[] };
   addons?: (Omit<NonNullable<Project['addons']>[0], 'title' | 'description'> & {
     title: { [key in Locale]: string };
@@ -132,8 +130,8 @@ const projectsBase: ProjectBase[] = [
     slug: 'blue-shift-rus',
     downloadUrl: 'https://disk.yandex.ru/d/vUgfp23zch4rCw',
     screenshots: [
-      { src: '/images/projects/blue-shift-rus/bs_screen1.jpg', alt: 'Blue Shift screenshot 1', hint: 'game character' },
-      { src: 'https://picsum.photos/seed/bs2/800/600', alt: 'Blue Shift screenshot 2', hint: 'underground tunnel' },
+    { src: '/images/projects/blue-shift-rus/bs_screen1.jpg', alt: 'Blue Shift screenshot 1', hint: 'game character' },
+    { src: '/images/projects/blue-shift-rus/bs_screen2.jpg', alt: 'Blue Shift screenshot 2', hint: 'underground tunnel' },
     ],
     installation: {
       en: ["Place the BSRusFull.pk3 file into the 'bshift/custom' directory."],
@@ -166,8 +164,8 @@ const projectsBase: ProjectBase[] = [
     slug: 'cs-1-6-rus',
     downloadUrl: 'https://disk.yandex.ru/d/DMh4ZBKAcWXVRQ',
     screenshots: [
-      { src: 'https://picsum.photos/seed/cs1/800/600', alt: 'CS 1.6 screenshot 1', hint: 'dust map' },
-      { src: 'https://picsum.photos/seed/cs2/800/600', alt: 'CS 1.6 screenshot 2', hint: 'first person' },
+    { src: '/images/projects/cs-1-6-rus/cs_screen1.jpg', alt: 'CS 1.6 screenshot 1', hint: 'dust map' },
+    { src: '/images/projects/cs-1-6-rus/cs_screen2.jpg', alt: 'CS 1.6 screenshot 2', hint: 'first person' },
     ],
     installation: {
       en: [
@@ -277,8 +275,8 @@ const projectsBase: ProjectBase[] = [
     slug: 'tfc-rus',
     downloadUrl: 'https://github.com/Vladislav4KZ/tfc-russian/releases/download/latest/TFCRusFull.pk3',
     screenshots: [
-        { src: 'https://picsum.photos/seed/tfc1/800/600', alt: 'TFC screenshot 1', hint: 'team gameplay' },
-        { src: 'https://picsum.photos/seed/tfc2/800/600', alt: 'TFC screenshot 2', hint: 'capture point' },
+    { src: '/images/projects/tfc-rus/tfc_screen1.jpg', alt: 'TFC screenshot 1', hint: 'team gameplay' },
+    { src: '/images/projects/tfc-rus/tfc_screen2.jpg', alt: 'TFC screenshot 2', hint: 'capture point' },
     ],
     installation: {
       en: ["Place TFCRusFull.pk3 in the tfc/custom folder"],
