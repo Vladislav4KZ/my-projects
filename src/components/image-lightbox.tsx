@@ -23,10 +23,15 @@ export function ImageLightbox({ images, startIndex, onClose, dictionary }: Image
   const [currentIndex, setCurrentIndex] = React.useState(startIndex);
   const [loading, setLoading] = React.useState(true);
   const [error, setError] = React.useState(false);
+  const imgRef = React.useRef<HTMLImageElement | null>(null);
 
   React.useEffect(() => {
     setLoading(true);
     setError(false);
+    // Check if the image is already loaded (for example, from cache)
+    if (imgRef.current && imgRef.current.complete && imgRef.current.naturalWidth !== 0) {
+      setLoading(false);
+    }
   }, [currentIndex]);
 
   return (
@@ -57,6 +62,7 @@ export function ImageLightbox({ images, startIndex, onClose, dictionary }: Image
                       </div>
                     ) : (
                       <Image
+                        ref={currentIndex === idx ? imgRef : undefined}
                         src={image.src.startsWith('https://') ? `${image.src.split('?')[0]}?seed=${image.hint.replace(/\s+/g, '')}${idx}` : image.src}
                         alt={image.alt}
                         data-ai-hint={image.hint}
