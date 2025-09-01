@@ -118,7 +118,7 @@ const iconMap: { [key: string]: React.ElementType } = {
   'half-life-rus': HalfLifeIcon,
   'blue-shift-rus': BlueShiftIcon,
   'opposing-force-rus': OpposingForceIcon,
-  'cs-1-6-rus': CSIcon,
+  'cs-16-rus': CSIcon,
   'tfc-rus': TFCIcon,
   'yapb-graphs': YaPBIcon,
 };

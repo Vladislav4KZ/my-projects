@@ -161,11 +161,11 @@ const projectsBase: ProjectBase[] = [
     ]
   },
   {
-    slug: 'cs-1-6-rus',
+    slug: 'cs-16-rus',
     downloadUrl: 'https://disk.yandex.ru/d/DMh4ZBKAcWXVRQ',
     screenshots: [
-    { src: '/images/projects/cs-1-6-rus/cs_screen1.jpg', alt: 'CS 1.6 screenshot 1', hint: 'dust map' },
-    { src: '/images/projects/cs-1-6-rus/cs_screen2.jpg', alt: 'CS 1.6 screenshot 2', hint: 'first person' },
+    { src: '/images/projects/cs-16-rus/cs_screen1.jpg', alt: 'CS 1.6 screenshot 1', hint: 'dust map' },
+    { src: '/images/projects/cs-16-rus/cs_screen2.jpg', alt: 'CS 1.6 screenshot 2', hint: 'first person' },
     ],
     installation: {
       en: [
@@ -352,7 +352,7 @@ const translations: { [slug: string]: { [key in Locale]: Omit<Project, keyof Pro
       description: 'Голоса:\nГолограмма Барни/Живой Барни: Безымянный актёр «Киев-12», издатель Triada\nОтис: Станислав Черсков\nУчёные: Евгений Синельников + дополнительный голос от Ивана Титова\nВоенные HECU: Пётр Бойко + дополнительный голос от Ивана Титова\nДоктор Розенберг: Филипп Буренин\nОповещения в вагонетке: Елена Полонецкая\nСистема оповещений Чёрной Мезы: Нейронный голос "Майкрософт Дмитрий" с дальнейшей обработкой и контролем интонации/ударений от $_Vladislav\n\nТекст:\nПеревод MainUI/MainTUI для Xash3D FWGS: $_Vladislav\nПеревод изображений кнопок меню WON/Xash3D: $_Vladislav\nПеревод остального внутриигрового текста: $_Vladislav\n\nВ состав русификатора входит:\n- Шрифты с поддержкой кириллицы (fonts.wad, gfx.wad)\n- Переведённые загрузочные экраны (cached.wad, gfx.wad)\n- Перевод текста\n- Перевод озвучки\n- Патченные карты для поддержки локализации\n\n**Если понравился перевод, поддержите меня на Boosty!**\nhttps://boosty.to/rasstaman1337',
     }
   },
-  'cs-1-6-rus': {
+  'cs-16-rus': {
     en: {
       title: 'CS 1.6 Russian Localization',
       shortDescription: 'Full Russian localization for Counter-Strike 1.6.',
