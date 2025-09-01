@@ -11,7 +11,8 @@ export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }))
 }
 
-export default async function HomePage({ params: { lang } }: { params: { lang: Locale } }) {
+export default async function HomePage({ params }: { params: { lang: Locale } }) {
+  const { lang } = await params;
   const projects = getProjects(lang)
   const dictionary = await getDictionary(lang)
 

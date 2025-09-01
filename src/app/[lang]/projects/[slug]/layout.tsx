@@ -15,7 +15,8 @@ export async function generateStaticParams() {
   return paths;
 }
 
-export async function generateMetadata({ params: { lang, slug } }: { params: { lang: Locale, slug: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: { lang: Locale, slug: string } }): Promise<Metadata> {
+  const { lang, slug } = await params;
   const project = getProjectBySlug(slug, lang)
   if (!project) {
     return { title: 'Project Not Found' }

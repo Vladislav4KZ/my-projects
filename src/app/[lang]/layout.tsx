@@ -6,10 +6,11 @@ import Footer from '@/components/common/footer'
 
 
 export async function generateMetadata({
-  params: { lang },
+  params,
 }: {
   params: { lang: Locale }
 }): Promise<Metadata> {
+  const { lang } = await params;
   const dictionary = await getDictionary(lang)
   return {
     title: dictionary.header.title,
@@ -19,11 +20,12 @@ export async function generateMetadata({
 
 export default async function LangLayout({
   children,
-  params: { lang },
+  params,
 }: {
   children: React.ReactNode,
   params: { lang: Locale }
 }) {
+  const { lang } = await params;
   const dictionary = await getDictionary(lang)
   return (
     <div className="flex min-h-screen flex-col">
