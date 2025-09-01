@@ -1,0 +1,34 @@
+
+{
+  "header": {
+    "title": "$_Vladislav's Projects",
+    "home": "Home"
+  },
+  "footer": {
+    "info": "Powered by GitHub Pages."
+  },
+  "home": {
+    "title": "Welcome!",
+    "subtitle": "I'm translating various mods for Half-Life, creating navigation files for bots, etc.",
+    "projects_header": "My Projects"
+  },
+  "project": {
+    "description": "Description",
+    "changelog": "Changelog",
+    "screenshots": "Screenshots",
+    "installation": "Installation",
+    "discussions": "Discussions",
+    "not_found_title": "Project Not Found",
+    "not_found_description": "The project you are looking for does not exist.",
+    "back_to_home": "Back to Home",
+    "step": "Step",
+    "comment_form_name": "Your Name",
+    "comment_form_comment": "Your Comment",
+    "comment_form_submit": "Submit Comment",
+    "comment_submitted_title": "Comment Submitted",
+    "comment_submitted_description": "Your comment has been added.",
+    "addons": "Addons",
+    "download": "Download",
+    "image_not_found": "Image not found"
+  }
+}
