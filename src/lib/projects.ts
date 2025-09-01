@@ -40,9 +40,12 @@ const projectsBase: ProjectBase[] = [
     slug: 'half-life-rus',
     downloadUrl: 'https://disk.yandex.ru/d/Kk5ysOoBNTfGPA',
     screenshots: [
-      { src: '/images/projects/half-life-rus/hl_screen1.jpg', alt: 'Half-Life screenshot 1', hint: 'gameplay screenshot' },
-      { src: '/images/projects/half-life-rus/hl_screen2.jpg', alt: 'Half-Life screenshot 2', hint: 'game menu' },
-      { src: '/images/projects/half-life-rus/hl_screen3.jpg', alt: 'Half-Life screenshot 3', hint: 'game environment' },
+      { src: '/images/projects/half-life-rus/HLRus_1.jpg', alt: 'Half-Life screenshot 1', hint: 'Screenshot 1' },
+      { src: '/images/projects/half-life-rus/HLRus_2.jpg', alt: 'Half-Life screenshot 2', hint: 'Screenshot 2' },
+      { src: '/images/projects/half-life-rus/HLRus_3.jpg', alt: 'Half-Life screenshot 3', hint: 'Screenshot 3' },
+      { src: '/images/projects/half-life-rus/HLRus_4.jpg', alt: 'Half-Life screenshot 4', hint: 'Screenshot 4' },
+      { src: '/images/projects/half-life-rus/HLRus_5.jpg', alt: 'Half-Life screenshot 5', hint: 'Screenshot 5' },
+      { src: '/images/projects/half-life-rus/HLRus_6.jpg', alt: 'Half-Life screenshot 6', hint: 'Screenshot 6' },
     ],
     installation: {
       en: [
