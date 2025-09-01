@@ -127,8 +127,8 @@ const projectsBase: ProjectBase[] = [
           ru: 'Hi-Res озвучка'
         },
         description: {
-          en: 'High-quality voiceovers for HECU soldiers and Black Mesa announcements.',
-          ru: 'Высококачественная озвучка для солдат HECU и оповещений Чёрной Мезы.'
+          en: 'High-quality voiceovers (16 bit 44,1 KHz) for Human Grunts and Black Mesa announcements.',
+          ru: 'Высококачественная озвучка (16 бит 44,1 КГц) для военного отряда HECU и оповещений Чёрной Мезы.'
         }
       }
     ]
@@ -353,7 +353,7 @@ const translations: { [slug: string]: { [key in Locale]: Omit<Project, keyof Pro
     en: {
       title: 'Half-Life Russian Localization',
       shortDescription: 'Full Russian localization for the original Half-Life.',
-      description: 'Authors:\nText localization: $_Vladislav\nVoice localization: "XXI Century", Triada Games, Buka Entertainment, 7Wolf, Fargus, and Kudos.\n\nSoldier voice-over: Pyotr Boyko\nBlack Mesa announcements voice-over: Evgeny Sinelnikov\nMain menu localization for Xash3D (WON-Style): Vladislav Sukhov ($_Vladislav)\nH.E.V. suit HD voice-over: Buka Entertainment\nMainUI Xash3D localization: $_Vladislav\n\nIncludes:\n- Text localization\n- Voice localization\n- Russian fonts\n- Main menu localization\n\n**If you liked the translation, support me on Boosty!**\nhttps://boosty.to/rasstaman1337',
+      description: 'Authors:\nText localization: $_Vladislav\nVoice localization: "XXI Century", Triada Games, Buka Entertainment, 7Wolf, Fargus, and Kudos.\n\nHuman Grunts voice-over: Pyotr Boyko\nBlack Mesa announcements voice-over: Evgeny Sinelnikov\nMain menu localization for Xash3D (WON-Style): Vladislav Sukhov ($_Vladislav)\nH.E.V. suit HD voice-over: Buka Entertainment\nMainUI Xash3D localization: $_Vladislav\n\nIncludes:\n- Text localization\n- Voice localization\n- Russian fonts\n- Main menu localization\n\n**If you liked the translation, support me on Boosty!**\nhttps://boosty.to/rasstaman1337',
     },
     ru: {
       title: 'Русификатор Half-Life',
@@ -365,7 +365,7 @@ const translations: { [slug: string]: { [key in Locale]: Omit<Project, keyof Pro
     en: {
       title: 'Blue Shift Russian Localization',
       shortDescription: 'Full Russian localization for Half-Life: Blue Shift.',
-      description: 'Voices:\nBarney Hologram/Live Barney: Unnamed actor from "Kyiv-12", published by Triada\nOtis: Stanislav Cherskov\nScientists: Evgeny Sinelnikov + additional voice by Ivan Titov\nHECU Marines: Pyotr Boyko + additional voice by Ivan Titov\nDr. Rosenberg: Philipp Burenin\nBlack Mesa Transit System Announcements: Elena Polonetskaya\nBlack Mesa Announcement System: "Microsoft Dmitry" neural voice with further processing and intonation/stress control by $_Vladislav\n\nText:\nMainUI/MainTUI translation for Xash3D FWGS: $_Vladislav\nTranslation of WON/Xash3D menu button images: $_Vladislav\nTranslation of other in-game text: $_Vladislav\n\nIncludes:\n- Fonts with Cyrillic support (fonts.wad, gfx.wad)\n- Translated loading screens (cached.wad, gfx.wad)\n- Text translation\n- Voiceover translation\n- Patched maps to support localization\n\n**If you liked the translation, support me on Boosty!**\nhttps://boosty.to/rasstaman1337',
+      description: 'Voices:\nBarney Hologram/Live Barney: Unnamed actor from "Kyiv-12", published by Triada\nOtis: Stanislav Cherskov\nScientists: Evgeny Sinelnikov + additional voice by Ivan Titov\nHuman Grunts: Pyotr Boyko + additional voice by Ivan Titov\nDr. Rosenberg: Philipp Burenin\nBlack Mesa Transit System Announcements: Elena Polonetskaya\nBlack Mesa Announcement System: "Microsoft Dmitry" neural voice with further processing and intonation/stress control by $_Vladislav\n\nText:\nMainUI/MainTUI translation for Xash3D FWGS: $_Vladislav\nTranslation of WON/Xash3D menu button images: $_Vladislav\nTranslation of other in-game text: $_Vladislav\n\nIncludes:\n- Fonts with Cyrillic support (fonts.wad, gfx.wad)\n- Translated loading screens (cached.wad, gfx.wad)\n- Text translation\n- Voiceover translation\n- Patched maps to support localization\n\n**If you liked the translation, support me on Boosty!**\nhttps://boosty.to/rasstaman1337',
     },
     ru: {
       title: 'Русификатор Blue Shift',
