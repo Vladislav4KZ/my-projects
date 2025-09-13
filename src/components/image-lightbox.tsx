@@ -24,6 +24,7 @@ export function ImageLightbox({ images, startIndex, onClose, dictionary }: Image
   const [loading, setLoading] = React.useState(true);
   const [error, setError] = React.useState(false);
   const imgRef = React.useRef<HTMLImageElement | null>(null);
+  const swiperRef = React.useRef<any>(null);
 
   React.useEffect(() => {
     setLoading(true);
@@ -46,11 +47,14 @@ export function ImageLightbox({ images, startIndex, onClose, dictionary }: Image
           <div className="relative w-full h-full flex items-center justify-center">
             <Swiper
               initialSlide={startIndex}
+              onSwiper={(swiper) => (swiperRef.current = swiper)}
               onSlideChange={(swiper) => {
-                setCurrentIndex(swiper.activeIndex);
+                // use realIndex so looping doesn't return duplicate/virtual slide indexes
+                setCurrentIndex(swiper.realIndex);
               }}
               className="w-full h-full"
               allowTouchMove={true}
+              loop={true}
             >
               {images.map((image, idx) => (
                 <SwiperSlide key={image.src + idx}>
@@ -92,7 +96,19 @@ export function ImageLightbox({ images, startIndex, onClose, dictionary }: Image
             </Swiper>
             <button
               type="button"
-              onClick={() => setCurrentIndex(currentIndex > 0 ? currentIndex - 1 : images.length - 1)}
+              onClick={(e) => {
+                e.stopPropagation()
+                const prevIndex = (currentIndex - 1 + images.length) % images.length
+                if (swiperRef.current && typeof swiperRef.current.slideToLoop === 'function') {
+                  // slideToLoop will go to the correct looped slide for the provided real index
+                  swiperRef.current.slideToLoop(prevIndex)
+                } else if (swiperRef.current && typeof swiperRef.current.slidePrev === 'function') {
+                  // fallback to slidePrev if slideToLoop is not available
+                  swiperRef.current.slidePrev()
+                } else {
+                  setCurrentIndex(prevIndex)
+                }
+              }}
               className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-white hover:bg-white/10 h-12 w-12 z-20 flex items-center justify-center"
               aria-label="Previous image"
             >
@@ -100,7 +116,17 @@ export function ImageLightbox({ images, startIndex, onClose, dictionary }: Image
             </button>
             <button
               type="button"
-              onClick={() => setCurrentIndex(currentIndex < images.length - 1 ? currentIndex + 1 : 0)}
+              onClick={(e) => {
+                e.stopPropagation()
+                const nextIndex = (currentIndex + 1) % images.length
+                if (swiperRef.current && typeof swiperRef.current.slideToLoop === 'function') {
+                  swiperRef.current.slideToLoop(nextIndex)
+                } else if (swiperRef.current && typeof swiperRef.current.slideNext === 'function') {
+                  swiperRef.current.slideNext()
+                } else {
+                  setCurrentIndex(nextIndex)
+                }
+              }}
               className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-white hover:bg-white/10 h-12 w-12 z-20 flex items-center justify-center"
               aria-label="Next image"
             >
