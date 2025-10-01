@@ -72,8 +72,8 @@ const projectsBase: ProjectBase[] = [
       {
         date: '2025-10-02',
         changes: {
-          en: ['Fixes in the MainUI translation', 'Added translation for MainTUI (text-based interface)'],
-          ru: ['Исправления в переводе MainUI', 'Добавлен перевод MainTUI (текстовый интерфейс)']
+          en: ['Fixes in the MainUI translation', 'Removed MainUI localization strings for the old engine (Xash3D FWGS 0.19.x)', 'Added translation for MainTUI (text-based interface)'],
+          ru: ['Исправления в переводе MainUI', 'Удалены строки локализации MainUI для старого движка (Xash3D FWGS 0.19.x)', 'Добавлен перевод MainTUI (текстовый интерфейс)']
         }
       },
       {
