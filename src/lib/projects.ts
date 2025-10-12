@@ -142,7 +142,7 @@ const projectsBase: ProjectBase[] = [
   },
   {
     slug: 'blue-shift-rus',
-    downloadUrl: 'https://disk.yandex.ru/d/vUgfp23zch4rCw',
+    downloadUrl: 'https://disk.yandex.ru/d/j8bWc1SM0etb-g',
     screenshots: [
     { src: '/images/projects/blue-shift-rus/BSRus_1.png', alt: 'Blue Shift screenshot 1', hint: 'Main Menu' },
     { src: '/images/projects/blue-shift-rus/BSRus_2.png', alt: 'Blue Shift screenshot 2', hint: 'Configuration' },
@@ -156,6 +156,23 @@ const projectsBase: ProjectBase[] = [
       ru: ["Положите файл BSRusFull.pk3 в папку bshift/custom."]
     },
     changelog: [
+      {
+        date: '2025-10-13',
+        changes: {
+          en: [
+            'Renamed the audio file ba_canal_death1.wav to ba_canal_wound1.wav, as instead of Barney\'s death moans and cries, the line about a leg injury was played',
+            'Fixes in the MainUI translation',
+            'Removed MainUI localization strings for the old engine (Xash3D FWGS 0.19.x)',
+            'Translated new strings for MainTUI'
+          ],
+          ru: [
+            'Переименован аудиофайл ba_canal_death1.wav в ba_canal_wound1.wav, так как вместо предсмертных стонов и криков Барни воспроизводилась реплика о ранении ноги',
+            'Исправления в переводе MainUI',
+            'Удалены строки локализации MainUI для старого движка (Xash3D FWGS 0.19.x)',
+            'Переведены новые строки для MainTUI'
+          ]
+        }
+      },
       {
         date: '2025-08-27',
         changes: {
@@ -377,7 +394,7 @@ const translations: { [slug: string]: { [key in Locale]: Omit<Project, keyof Pro
     ru: {
       title: 'Русификатор Blue Shift',
       shortDescription: 'Полная русская локализация для Half-Life: Blue Shift.',
-      description: 'Голоса:\nГолограмма Барни/Живой Барни: Безымянный актёр «Киев-12», издатель Triada\nОтис: Станислав Черсков\nУчёные: Евгений Синельников + дополнительный голос от Ивана Титова\nВоенные HECU: Пётр Бойко + дополнительный голос от Ивана Титова\nДоктор Розенберг: Филипп Буренин\nОповещения в вагонетке: Елена Полонецкая\nСистема оповещений Чёрной Мезы: Нейронный голос "Майкрософт Дмитрий" с дальнейшей обработкой и контролем интонации/ударений от $_Vladislav\n\nТекст:\nПеревод MainUI/MainTUI для Xash3D FWGS: $_Vladislav\nПеревод изображений кнопок меню WON/Xash3D: $_Vladislav\nПеревод остального внутриигрового текста: $_Vladislav\n\nВ состав русификатора входит:\n- Шрифты с поддержкой кириллицы (fonts.wad, gfx.wad)\n- Переведённые загрузочные экраны (cached.wad, gfx.wad)\n- Перевод текста\n- Перевод озвучки\n- Патченные карты для поддержки локализации\n\n**Если понравился перевод, поддержите меня на Boosty!**\nhttps://boosty.to/rasstaman1337',
+      description: 'Голоса:\nГолограмма Барни/Живой Барни: Безымянный актёр «Киев-12», издатель Triada\nОтис: Станислав Черсков\nУчёные: Евгений Синельников + дополнительный голос от Ивана Титова\nВоенные HECU: Пётр Бойко + дополнительный голос от Ивана Титова\nДоктор Розенберг: Филипп Буренин\nОповещения транспортной системы Чёрной Мезы: Елена Полонецкая\nСистема оповещений Чёрной Мезы: Нейронный голос "Майкрософт Дмитрий" с дальнейшей обработкой и контролем интонации/ударений от $_Vladislav\n\nТекст:\nПеревод MainUI/MainTUI для Xash3D FWGS: $_Vladislav\nПеревод изображений кнопок меню WON/Xash3D: $_Vladislav\nПеревод остального внутриигрового текста: $_Vladislav\n\nВ состав русификатора входит:\n- Шрифты с поддержкой кириллицы (fonts.wad, gfx.wad)\n- Переведённые загрузочные экраны (cached.wad, gfx.wad)\n- Перевод текста\n- Перевод озвучки\n- Патченные карты для поддержки локализации\n\n**Если понравился перевод, поддержите меня на Boosty!**\nhttps://boosty.to/rasstaman1337',
     }
   },
   'cs-16-rus': {
