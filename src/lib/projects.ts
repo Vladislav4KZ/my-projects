@@ -197,7 +197,7 @@ const projectsBase: ProjectBase[] = [
   },
   {
     slug: 'cs-16-rus',
-    downloadUrl: 'https://disk.yandex.ru/d/DMh4ZBKAcWXVRQ',
+    downloadUrl: 'https://disk.yandex.ru/d/m_rSjtOa4nYq-A',
     screenshots: [
     { src: '/images/projects/cs-16-rus/CSRus_1.png', alt: 'CS 1.6 screenshot 1', hint: 'Main Menu' },
     { src: '/images/projects/cs-16-rus/CSRus_2.png', alt: 'CS 1.6 screenshot 2', hint: 'Crosshair' },
@@ -226,6 +226,25 @@ const projectsBase: ProjectBase[] = [
       ]
     },
     changelog: [
+      {
+        date: '2025-12-16',
+        changes: {
+          en: [
+            'The defuse kit in the equipment purchase menu is now grayed out on maps that do not belong to the bomb plant/defuse scenario.',
+            'Fixed text overlapping in the radio selector.',
+            'Added translation of the DM Menu for the Lemita Project server.',
+            'Completely redone the translation from scratch for files such as cstrike_english.txt, titles.txt, and map description files in the maps folder.',
+            'Minor translation fixes in valve_russian.txt.'
+          ],
+          ru: [
+            'Пункт с набором сапёра в меню покупки снаряжения на картах, которые не относятся к сценарию установки/обезвреживания бомбы, теперь не активен для покупки.',
+            'Исправлены наложения текста в радиоселекторе.',
+            'Добавлен перевод DM Menu для сервера Lemita Project.',
+            'Полностью переделан перевод с нуля таких файлов, как cstrike_english.txt, titles.txt и файлов описания карт в папке maps.',
+            'Мелкие исправления перевода в valve_russian.txt.'
+          ],
+        }
+      },
       {
         date: '2025-08-11',
         changes: {
