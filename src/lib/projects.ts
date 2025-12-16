@@ -292,8 +292,8 @@ const projectsBase: ProjectBase[] = [
             'Fixed non-functional "Himodels" (High quality models) and "Minmodels" (Minimum models) buttons, as in the previous localization version from another author they were written as console commands a not cvars.',
             'Fixed issues in the weapon purchase menu:',
             'You can now buy the MAC-10 on the terrorist team.',
-            'Fixed incorrect pistol name from Dual Elites to ES Five-Seven in the special forces store.',
-            'Fixed issue with the interrupted "Tactical Shield" line in the special forces equipment store.',
+            'Fixed incorrect pistol name from Dual Elites to ES Five-Seven in the Counter-Terrorists buy menu.',
+            'Fixed issue with the interrupted "Tactical Shield" line in the Counter-Terrorists equipment buy menu.',
             'Now in the store are displayed the correct characteristics of the weapon. For example earlier was written weapon weight with empty magazine, but in the store it was specified as if it was weighed with the full one. It was an error in the weapon purchase menu in CS16Client, even on the English language. Made as it is in the original PC version of Counter-Strike 1.6. (Apparently it was an error by the author of the original purchase menu, he simply copied and pasted one and the same text without editing).',
           ],
           ru: [
