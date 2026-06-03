@@ -43,7 +43,7 @@ type ProjectBase = Omit<Project, 'title' | 'shortDescription' | 'description' | 
 const projectsBase: ProjectBase[] = [
   {
     slug: 'half-life-rus',
-    downloadUrl: 'https://disk.yandex.ru/d/8mVSXRppJdneVA',
+    downloadUrl: 'https://disk.yandex.ru/d/eJ5O7MDMsJWlsw',
     screenshots: [
       { src: '/images/projects/half-life-rus/HLRus_1.jpg', alt: 'Half-Life screenshot 1', hint: 'Configuration' },
       { src: '/images/projects/half-life-rus/HLRus_2.jpg', alt: 'Half-Life screenshot 2', hint: 'Hazard Course' },
@@ -69,6 +69,13 @@ const projectsBase: ProjectBase[] = [
       ]
     },
     changelog: [
+      {
+        date: '2026-06-03',
+        changes: {
+          en: ['Added translations for new MainUI strings', 'Added the translated picbutton and banner for the new menu item - "Gyroscope"', 'Cropped the empty bottom space on picbuttons to fix effect rendering in the latest Xash3D FWGS builds'],
+          ru: ['Добавлен перевод новых строк MainUI', 'Добавлены переведённая кнопка и баннер для нового пункта меню - «Гироскоп»', 'Обрезано нижнее пустое пространство на кнопках-изображениях для корректного отображения эффектов на последних билдах Xash3D FWGS']
+        }
+      },
       {
         date: '2026-02-04',
         changes: {
