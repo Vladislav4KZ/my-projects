@@ -72,8 +72,8 @@ const projectsBase: ProjectBase[] = [
       {
         date: '2026-06-16',
         changes: {
-          en: ['Added translations for new MainUI strings', 'Added translations for missing strings from the Half-Life 25th Anniversary Update in titles.txt', 'Added missing strings from the Half-Life 25th Anniversary Update to sentences.txt'],
-          ru: ['Добавлен перевод новых строк MainUI', 'Добавлен перевод новых строк из юбилейного обновления Half-Life (25th Anniversary Update) в titles.txt, ранее отсутствовавшие в русификаторе', 'Добавлены новые строчки из юбилейного обновления Half-Life (25th Anniversary Update) в sentences.txt, ранее отсутствовавшие в русификаторе']
+          en: ['Added translations for new MainUI strings', 'Added translations for missing strings from the Half-Life 25th Anniversary Update in titles.txt', 'Added missing strings from the Half-Life 25th Anniversary Update to sentences.txt', 'Corrected names in credits.txt'],
+          ru: ['Добавлен перевод новых строк MainUI', 'Добавлен перевод новых строк из юбилейного обновления Half-Life (25th Anniversary Update) в titles.txt, ранее отсутствовавшие в русификаторе', 'Добавлены новые строчки из юбилейного обновления Half-Life (25th Anniversary Update) в sentences.txt, ранее отсутствовавшие в русификаторе', 'Исправлены имена в credits.txt']
         }
       },
       {
