@@ -43,7 +43,7 @@ type ProjectBase = Omit<Project, 'title' | 'shortDescription' | 'description' | 
 const projectsBase: ProjectBase[] = [
   {
     slug: 'half-life-rus',
-    downloadUrl: 'https://disk.yandex.ru/d/eJ5O7MDMsJWlsw',
+    downloadUrl: 'https://disk.yandex.ru/d/sdgQJkmywm4N1w',
     screenshots: [
       { src: '/images/projects/half-life-rus/HLRus_1.jpg', alt: 'Half-Life screenshot 1', hint: 'Configuration' },
       { src: '/images/projects/half-life-rus/HLRus_2.jpg', alt: 'Half-Life screenshot 2', hint: 'Hazard Course' },
@@ -69,6 +69,13 @@ const projectsBase: ProjectBase[] = [
       ]
     },
     changelog: [
+      {
+        date: '2026-06-16',
+        changes: {
+          en: ['Added translations for new MainUI strings', 'Added translations for missing strings from the Half-Life 25th Anniversary Update in titles.txt', 'Added missing strings from the Half-Life 25th Anniversary Update to sentences.txt'],
+          ru: ['Добавлен перевод новых строк MainUI', 'Добавлен перевод новых строк из юбилейного обновления Half-Life (25th Anniversary Update) в titles.txt, ранее отсутствовавшие в русификаторе', 'Добавлены новые строчки из юбилейного обновления Half-Life (25th Anniversary Update) в sentences.txt, ранее отсутствовавшие в русификаторе']
+        }
+      },
       {
         date: '2026-06-03',
         changes: {
