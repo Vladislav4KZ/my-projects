@@ -43,7 +43,7 @@ type ProjectBase = Omit<Project, 'title' | 'shortDescription' | 'description' | 
 const projectsBase: ProjectBase[] = [
   {
     slug: 'half-life-rus',
-    downloadUrl: 'https://disk.yandex.ru/d/sdgQJkmywm4N1w',
+    downloadUrl: 'https://disk.yandex.ru/d/OfKOSzWgfgEOXQ',
     screenshots: [
       { src: '/images/projects/half-life-rus/HLRus_1.jpg', alt: 'Half-Life screenshot 1', hint: 'Configuration' },
       { src: '/images/projects/half-life-rus/HLRus_2.jpg', alt: 'Half-Life screenshot 2', hint: 'Hazard Course' },
@@ -69,6 +69,13 @@ const projectsBase: ProjectBase[] = [
       ]
     },
     changelog: [
+      {
+        date: '2026-09-01',
+        changes: {
+          en: ['Improved terminology and other MainUI translation fixes'],
+          ru: ['Улучшена терминология и другие исправления перевода MainUI']
+        }
+      },
       {
         date: '2026-06-16',
         changes: {
