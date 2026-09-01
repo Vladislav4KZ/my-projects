@@ -225,7 +225,7 @@ const projectsBase: ProjectBase[] = [
   },
   {
     slug: 'cs-16-rus',
-    downloadUrl: 'https://disk.yandex.ru/d/m_rSjtOa4nYq-A',
+    downloadUrl: 'https://disk.yandex.ru/d/tUaql4V_21XbMw',
     screenshots: [
     { src: '/images/projects/cs-16-rus/CSRus_1.png', alt: 'CS 1.6 screenshot 1', hint: 'Main Menu' },
     { src: '/images/projects/cs-16-rus/CSRus_2.png', alt: 'CS 1.6 screenshot 2', hint: 'Crosshair' },
@@ -254,6 +254,23 @@ const projectsBase: ProjectBase[] = [
       ]
     },
     changelog: [
+      {
+        date: '2026-09-02',
+        changes: {
+          en: [
+            'Added MainTUI translation',
+            'Translated new strings in MainUI and fixed existing ones',
+            'Removed strings from the old engine in the MainUI localization file',
+            'Added translated banner and picbutton for the gyroscope menu'
+          ],
+          ru: [
+            'Добавлен перевод MainTUI',
+            'Переведены новые строки в MainUI и исправлены существующие',
+            'Удалены строки из старого движка в файле локализации MainUI',
+            'Добавлены переведённые изображения баннера и кнопки для меню настройки гироскопа',
+          ],
+        }
+      },
       {
         date: '2025-12-16',
         changes: {
