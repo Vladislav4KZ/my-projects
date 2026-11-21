@@ -1,33 +1,23 @@
+import type { NextConfig } from 'next';
 
-import type {NextConfig} from 'next';
-
-const isGithubActions = process.env.GITHUB_ACTIONS === 'true'
-const repo = process.env.GITHUB_REPOSITORY?.replace(/.*?\//, '')
-const basePath = isGithubActions ? `/${repo}` : ''
+const isGithubActions = process.env.GITHUB_ACTIONS === 'true';
+const repository = process.env.GITHUB_REPOSITORY?.split('/')[1];
+const basePath = isGithubActions && repository ? `/${repository}` : '';
 
 const nextConfig: NextConfig = {
-  /* config options here */
   output: 'export',
-  basePath: basePath,
+  basePath,
+  trailingSlash: true,
   env: {
     NEXT_PUBLIC_BASE_PATH: basePath,
   },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  typescript: { ignoreBuildErrors: true },
+  eslint: { ignoreDuringBuilds: true },
   images: {
     unoptimized: true,
     remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'placehold.co',
-        port: '',
-        pathname: '/**',
-      }
-    ]
+      { protocol: 'https', hostname: 'placehold.co', port: '', pathname: '/**' },
+    ],
   },
   transpilePackages: ['next-themes'],
 };

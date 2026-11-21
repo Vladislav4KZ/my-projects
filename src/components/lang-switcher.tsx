@@ -17,10 +17,11 @@ export function LangSwitcher() {
   const router = useRouter()
 
   const redirectedPathName = (locale: string) => {
-    if (!pathName) return "/"
+    if (!pathName || pathName === "/") return `/${locale}/`
     const segments = pathName.split("/")
     segments[1] = locale
-    return segments.join("/")
+    const path = segments.join("/")
+    return path.endsWith("/") ? path : `${path}/`
   }
 
   return (

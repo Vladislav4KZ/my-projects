@@ -79,7 +79,7 @@ export default function Header({ lang, dictionary }: { lang: Locale, dictionary:
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 max-w-screen-2xl items-center">
         <div className="mr-4 flex sm:flex-1">
-          <Link href={`/${lang}`} className="mr-6 flex items-center space-x-2">
+          <Link href={`/${lang}/`} className="mr-6 flex items-center space-x-2">
             <span className="font-bold font-headline text-lg sm:inline-block whitespace-nowrap">
               {dictionary.title}
             </span>
