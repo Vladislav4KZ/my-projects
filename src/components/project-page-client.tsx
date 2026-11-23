@@ -24,7 +24,7 @@ import { Button } from '@/components/ui/button';
 import { Download } from 'lucide-react';
 import { CommentSection } from '@/components/comment-section';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { ProjectIcons, hasProjectIcon } from '@/components/icons';
+import { ProjectIcons, hasProjectIcon, YandexDiskIcon, MegaIcon } from '@/components/icons';
 import { ImageLightbox } from '@/components/image-lightbox';
 import { getScreenshotAlt } from '@/lib/screenshot-alt';
 
@@ -33,25 +33,6 @@ type ProjectPageClientProps = {
   dictionary: Dictionary;
   lang: Locale;
 };
-
-function YandexDiskMark() {
-  return (
-    <span
-      aria-hidden="true"
-      className="grid h-6 w-6 shrink-0 place-items-center rounded bg-white text-base font-black leading-none text-[#e21b22]"
-    >
-      Я
-    </span>
-  );
-}
-
-function MegaMark() {
-  return (
-    <svg aria-hidden="true" viewBox="0 0 24 24" className="h-6 w-6 shrink-0 fill-current">
-      <path d="M2.5 20V4h4.4L12 10.8 17.1 4h4.4v16h-4.2v-9.1l-4.2 5.6h-2.1l-4.3-5.6V20H2.5Z" />
-    </svg>
-  );
-}
 
 export function ProjectPageClient({
   project,
@@ -200,12 +181,16 @@ export function ProjectPageClient({
                       size="lg"
                       className={
                         isYandex
-                          ? 'w-full bg-[#ffdb4d] text-[#1f1f1f] hover:bg-[#f2cc3a] sm:w-auto'
-                          : 'w-full bg-[#d9272e] text-white hover:bg-[#bd2026] sm:w-auto'
+                          ? 'w-full bg-[#ffdb4d] text-[#1f1f1f] hover:bg-[#f2cc3a] sm:w-auto [&_svg]:size-6'
+                          : 'w-full bg-[#d9272e] text-white hover:bg-[#bd2026] sm:w-auto [&_svg]:size-6'
                       }
                     >
                       <Link href={option.url} target="_blank" rel="noopener noreferrer">
-                        {isYandex ? <YandexDiskMark /> : <MegaMark />}
+                        {isYandex ? (
+                          <YandexDiskIcon className="h-6 w-6 shrink-0" />
+                        ) : (
+                          <MegaIcon className="h-6 w-6 shrink-0" />
+                        )}
                         {isYandex
                           ? dictionary.project.downloadFromYandexDisk
                           : dictionary.project.downloadFromMega}

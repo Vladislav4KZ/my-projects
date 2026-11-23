@@ -114,6 +114,49 @@ const YaPBIcon = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
+/* Official brand icons for the download buttons */
+
+const YandexDiskIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="3 8 34 24" fill="none" {...props}>
+    <defs>
+      <mask id="yd-saucer-mask" style={{ maskType: 'alpha' }} maskUnits="userSpaceOnUse" x="4" y="9" width="32" height="22">
+        <path d="M15.0097 10.045C18.2361 8.52431 21.8315 8.8071 24.4868 10.2667C24.8242 10.4522 25.2084 10.5427 25.5917 10.5065C30.4321 10.0498 34.3515 11.2737 35.5537 13.8243C37.4446 17.8363 31.8961 23.6091 23.5498 27.543C15.2033 31.4769 7.21907 32.0824 5.32808 28.0704C4.18513 25.6454 5.53072 22.0895 8.61644 18.7863C8.87916 18.5051 9.04274 18.1461 9.10308 17.766C9.59003 14.6988 11.6858 11.6116 15.0097 10.045Z" fill="#146CFD" />
+      </mask>
+      <filter id="yd-blur-shadow" x="-2.13157" y="8.48659" width="41.6845" height="32.7905" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+        <feGaussianBlur stdDeviation="1.81481" result="effect1_foregroundBlur" />
+      </filter>
+      <filter id="yd-blur-shine" x="12.915" y="18.0273" width="17.8545" height="11.7715" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+        <feGaussianBlur stdDeviation="0.756351" result="effect1_foregroundBlur" />
+      </filter>
+    </defs>
+    <g mask="url(#yd-saucer-mask)">
+      <path d="M15.0097 10.045C18.2361 8.52431 21.8315 8.8071 24.4868 10.2667C24.8242 10.4522 25.2084 10.5427 25.5917 10.5065C30.4321 10.0498 34.3515 11.2737 35.5537 13.8243C37.4446 17.8363 31.8961 23.6091 23.5498 27.543C15.2033 31.4769 7.21907 32.0824 5.32808 28.0704C4.18513 25.6454 5.53072 22.0895 8.61644 18.7863C8.87916 18.5051 9.04274 18.1461 9.10308 17.766C9.59003 14.6988 11.6858 11.6116 15.0097 10.045Z" fill="#005EFA" />
+      <g filter="url(#yd-blur-shadow)">
+        <path d="M35.9235 14.5135C32.0372 17.5221 12.2844 20.5941 10.6975 25.9806C8.29904 34.1216 6.95883 33.2598 9.84129 37.6474C1.68839 35.3183 -1.6558 25.576 5.16815 19.1268C8.07763 16.9646 27.722 7.84986 35.9235 14.5135Z" fill="#003DA0" />
+      </g>
+      <path d="M36.1276 14.9343C37.7004 18.2714 31.9278 23.6184 23.5575 27.5635C15.1872 31.5087 7.38893 32.558 5.81606 29.2208C4.24318 25.8837 9.4913 19.4238 17.8616 15.4787C26.2319 11.5336 34.5547 11.5971 36.1276 14.9343Z" fill="#005EFA" />
+      <g filter="url(#yd-blur-shine)">
+        <path d="M29.1501 20.5648C29.8494 22.0484 27.0294 24.545 22.9954 26.4463C18.9614 28.3477 15.2409 28.9337 14.5417 27.4502C13.8424 25.9666 16.4292 22.9752 20.4632 21.0739C24.4972 19.1726 28.4509 19.0813 29.1501 20.5648Z" fill="white" fillOpacity="0.73" />
+      </g>
+      <path d="M28.9766 20.461C29.645 21.8792 26.8052 24.3336 22.7712 26.235C18.7372 28.1363 15.0366 28.7645 14.3682 27.3464C13.6998 25.9282 16.3167 23.0008 20.3507 21.0995C24.3847 19.1981 28.3082 19.0429 28.9766 20.461Z" fill="white" />
+    </g>
+  </svg>
+);
+
+const MegaIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" {...props}>
+    <circle cx="12" cy="12" r="12" fill="#ffffff" />
+    <circle cx="12" cy="12" r="10.9" fill="#D9272E" />
+    <g transform="translate(1.092 1.092) scale(0.908)">
+      <path d="M18.23 16.244a.371.371 0 0 1-.373.372H16.29a.371.371 0 0 1-.372-.372v-4.828c0-.04-.046-.06-.08-.033l-3.32 3.32a.742.742 0 0 1-1.043 0l-3.32-3.32c-.027-.027-.08-.007-.08.033v4.828a.371.371 0 0 1-.372.372H6.136a.371.371 0 0 1-.372-.372V7.757c0-.206.166-.372.372-.372h1.076a.75.75 0 0 1 .525.22l4.13 4.13a.18.18 0 0 0 .26 0l4.13-4.13c.14-.14.325-.22.525-.22h1.075c.206 0 .372.166.372.372z" fill="#ffffff" />
+    </g>
+  </svg>
+);
+
 const iconMap: { [key: string]: React.ElementType } = {
   'half-life-rus': HalfLifeIcon,
   'blue-shift-rus': BlueShiftIcon,
@@ -132,3 +175,5 @@ export const ProjectIcons = ({ slug, ...props }: IconProps) => {
   const IconComponent = iconMap[slug];
   return IconComponent ? <IconComponent {...props} /> : null;
 };
+
+export { YandexDiskIcon, MegaIcon };
