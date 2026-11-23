@@ -34,6 +34,25 @@ type ProjectPageClientProps = {
   lang: Locale;
 };
 
+function YandexDiskMark() {
+  return (
+    <span
+      aria-hidden="true"
+      className="grid h-6 w-6 shrink-0 place-items-center rounded bg-white text-base font-black leading-none text-[#e21b22]"
+    >
+      Я
+    </span>
+  );
+}
+
+function MegaMark() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" className="h-6 w-6 shrink-0 fill-current">
+      <path d="M2.5 20V4h4.4L12 10.8 17.1 4h4.4v16h-4.2v-9.1l-4.2 5.6h-2.1l-4.3-5.6V20H2.5Z" />
+    </svg>
+  );
+}
+
 export function ProjectPageClient({
   project,
   dictionary,
@@ -169,12 +188,40 @@ export function ProjectPageClient({
         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between">
           <div />
           <div className="flex-shrink-0">
-            <Button asChild size="lg">
-              <Link href={project.downloadUrl}>
-                <Download className="mr-2 h-5 w-5" />
-                {dictionary.project.download}
-              </Link>
-            </Button>
+            {project.downloadOptions?.length ? (
+              <div className="flex flex-col gap-3 sm:flex-row">
+                {project.downloadOptions.map((option) => {
+                  const isYandex = option.provider === 'yandex';
+
+                  return (
+                    <Button
+                      key={option.provider}
+                      asChild
+                      size="lg"
+                      className={
+                        isYandex
+                          ? 'w-full bg-[#ffdb4d] text-[#1f1f1f] hover:bg-[#f2cc3a] sm:w-auto'
+                          : 'w-full bg-[#d9272e] text-white hover:bg-[#bd2026] sm:w-auto'
+                      }
+                    >
+                      <Link href={option.url} target="_blank" rel="noopener noreferrer">
+                        {isYandex ? <YandexDiskMark /> : <MegaMark />}
+                        {isYandex
+                          ? dictionary.project.downloadFromYandexDisk
+                          : dictionary.project.downloadFromMega}
+                      </Link>
+                    </Button>
+                  );
+                })}
+              </div>
+            ) : (
+              <Button asChild size="lg">
+                <Link href={project.downloadUrl}>
+                  <Download className="mr-2 h-5 w-5" />
+                  {dictionary.project.download}
+                </Link>
+              </Button>
+            )}
           </div>
         </div>
       </header>

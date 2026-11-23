@@ -28,6 +28,8 @@
     "comment_submitted_description": "Ваш комментарий был добавлен.",
     "addons": "Дополнения",
     "download": "Скачать",
+    "downloadFromYandexDisk": "Скачать с Яндекс Диск",
+    "downloadFromMega": "Скачать с MEGA",
     "image_not_found": "Изображение не найдено"
   }
 }

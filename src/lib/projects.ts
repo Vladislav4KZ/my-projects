@@ -9,6 +9,10 @@ export interface Project {
   shortDescription: string;
   description: string;
   downloadUrl: string;
+  downloadOptions?: {
+    provider: 'yandex' | 'mega';
+    url: string;
+  }[];
   screenshots: {
     src: string;
     alt: string;
@@ -225,7 +229,11 @@ const projectsBase: ProjectBase[] = [
   },
   {
     slug: 'cs-16-rus',
-    downloadUrl: 'https://disk.yandex.ru/d/tUaql4V_21XbMw',
+    downloadUrl: 'https://disk.yandex.ru/d/6wDQuiO42uhUVg',
+    downloadOptions: [
+      { provider: 'yandex', url: 'https://disk.yandex.ru/d/6wDQuiO42uhUVg' },
+      { provider: 'mega', url: 'https://mega.nz/file/DGpiURab#9v6PWA5WN9YrQ1HinlgZT642qBAKXE_WJO-9SMnv_L4' },
+    ],
     screenshots: [
     { src: '/images/projects/cs-16-rus/CSRus_1.png', alt: 'CS 1.6 screenshot 1', hint: 'Main Menu' },
     { src: '/images/projects/cs-16-rus/CSRus_2.png', alt: 'CS 1.6 screenshot 2', hint: 'Crosshair' },
@@ -254,6 +262,19 @@ const projectsBase: ProjectBase[] = [
       ]
     },
     changelog: [
+      {
+        date: '2026-11-23',
+        changes: {
+          en: [
+            'Translated new strings in MainUI',
+            'Shortened checkbox labels in the enhanced crosshair settings'
+          ],
+          ru: [
+            'Переведены новые строки в MainUI',
+            'Сокращены подписи чекбоксов в расширенных настройках прицела'
+          ]
+        }
+      },
       {
         date: '2026-09-02',
         changes: {

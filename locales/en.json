@@ -28,6 +28,8 @@
     "comment_submitted_description": "Your comment has been added.",
     "addons": "Addons",
     "download": "Download",
+    "downloadFromYandexDisk": "Download from Yandex Disk",
+    "downloadFromMega": "Download from MEGA",
     "image_not_found": "Image not found"
   }
 }
